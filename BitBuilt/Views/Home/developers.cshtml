@@ -1,0 +1,127 @@
+﻿@{
+    ViewData["Title"] = "Our Developers";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(145deg, #004d40, #00bfae);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 60px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.4);
+            border: 2px solid #00ffe1;
+            border-radius: 30px;
+            padding: 60px 50px;
+            max-width: 1200px;
+            width: 100%;
+            box-shadow: 0 12px 40px rgba(0, 255, 225, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-shadow: 0 0 10px #00ffe1;
+        }
+
+        p {
+            font-size: 1.4rem;
+            color: #dff;
+            margin-bottom: 50px;
+        }
+
+        .developer-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .developer-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid #00ffe1;
+            border-radius: 20px;
+            padding: 25px;
+            width: 230px;
+            box-shadow: 0 0 15px rgba(0, 255, 225, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .developer-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 0 25px rgba(0, 255, 225, 0.4);
+            }
+
+            .developer-card img {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 15px;
+                border: 3px solid #00ffe1;
+            }
+
+            .developer-card span {
+                display: block;
+                font-size: 1.2rem;
+                font-weight: 600;
+                color: #ffffff;
+                text-shadow: 0 0 5px rgba(0, 255, 225, 0.5);
+            }
+
+        .highlight {
+            color: #00ffe1;
+            font-weight: bold;
+            text-shadow: 0 0 10px #00ffe1;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Meet the <span class="highlight">BitBuilt</span> Team</h1>
+        <p>Our brilliant minds who built this PC inventory system</p>
+
+        <div class="developer-list">
+            <div class="developer-card">
+                <img src="~/products/keana.jpg" alt="Keana Consebido">
+                <span>Keana Consebido</span>
+            </div>
+            <div class="developer-card">
+                <img src="~/products/bry.jpg" alt="Bryan De Guzman">
+                <span>Bryan De Guzman</span>
+            </div>
+            <div class="developer-card">
+                <img src="~/products/angela.jpg" alt="Angela Galang">
+                <span>Angela Galang</span>
+            </div>
+            <div class="developer-card">
+                <img src="~/products/yza.jpg" alt="Yzabelle Macalindong">
+                <span>Yzabelle Macalindong</span>
+            </div>
+            <div class="developer-card">
+                <img src="~/products/arvy.jpg" alt="Arvy Ecle">
+                <span>Arvy Ecle</span>
+            </div>
+            <div class="developer-card">
+                <img src="~/products/ernest.jpg" alt="Ernest Villareal">
+                <span>Ernest Villareal</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

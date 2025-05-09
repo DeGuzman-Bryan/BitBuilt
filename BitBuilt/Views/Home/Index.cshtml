@@ -1,0 +1,126 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<style>
+    body {
+        background-color: #101010;
+        color: #e0e0e0;
+        font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+    }
+
+    .text-center {
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    h1.display-4 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        color: #00bfae;
+        text-shadow: 2px 2px 8px rgba(0, 191, 174, 0.5);
+        letter-spacing: 2px;
+    }
+
+    p {
+        font-size: 1.25rem;
+        color: #b0b0b0;
+    }
+
+    a {
+        color: #00bfae;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+        a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+    .banner {
+        background: linear-gradient(135deg, #00bfae, #007b80);
+        padding: 80px 0;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+        .banner h1 {
+            font-size: 4rem;
+            color: white;
+        }
+
+        .banner p {
+            font-size: 1.5rem;
+            color: #f0f0f0;
+        }
+
+        .banner img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+    .logo {
+        position: absolute;
+        top: -40px;
+        right: 20px;
+        width: 150px;
+        height: auto;
+        z-index: 10;
+    }
+
+    /* Style for the buttons */
+    .btn-compare, .btn-developers {
+        background-color: #00bfae;
+        color: white;
+        padding: 15px 30px;
+        font-size: 1.25rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 20px;
+    }
+
+        .btn-compare:hover, .btn-developers:hover {
+            background-color: #007b80;
+        }
+</style>
+
+<div class="container">
+    <!-- Logo outside the blue banner -->
+    <img src="~/products/logo.png" alt="BitBuilt Logo" class="logo" />
+
+    <div class="banner">
+        <div class="text-center">
+            <h1 class="display-4">Welcome to BitBuilt</h1>
+            <p>Your trusted PC inventory shop for top-tier components and accessories.</p>
+
+            <!-- Insert Image Below the Heading -->
+            <img src="~/products/hhhs.png" alt="PC Inventory Header" />
+        </div>
+    </div>
+
+    <div class="text-center">
+        <h1>Explore the Best of Technology</h1>
+
+        <!-- Compare Button -->
+        <a href="@Url.Action("compare", "Home")" class="btn-compare">Compare Products</a>
+
+        <!-- Developer Members Button -->
+        <a href="@Url.Action("developers", "Home")" class="btn-developers">See Developer Members</a>
+    </div>
+</div>
